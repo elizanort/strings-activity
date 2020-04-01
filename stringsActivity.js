@@ -42,12 +42,14 @@ console.log(containsWordJava("JAVA IS FUN :D") === true);
 // Hint: Look at the "slice" method.  You can set the first argument to zero to make it start at the beginning of the string.   (Watch out that slice returns a new string! You need to assign it to something)
 
 function trimSentence(text, maxLength) {
-    if(text > maxLength){
-    trimSentence.slice(text - maxLength) + "..."
-    
+    let secondMax = maxLength-3
+    if(text.length < maxLength){
+        // returnString=text;
     } else {
-
+        let theSlice = text.slice(0, secondMax)
+        text = theSlice + "..."
     }
+    return text;
 }
     
 
